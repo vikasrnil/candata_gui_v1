@@ -3,7 +3,14 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 
-Rectangle {
+ApplicationWindow {
+    visible: true
+    width: Screen.width
+    height: Screen.height
+    visibility: Window.FullScreen
+    color: "white"
+
+    Rectangle {
     anchors.fill: parent
     color: "#0b1d0f"
 
@@ -127,6 +134,8 @@ Rectangle {
         repeat: true
         onTriggered: updateCanData()
     }
+}
+
 
     function updateCanData() {
         let keys = Object.keys(canHandler.canMap)
@@ -179,4 +188,16 @@ Rectangle {
             }
         }
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
